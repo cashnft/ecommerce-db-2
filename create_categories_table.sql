@@ -1,0 +1,7 @@
+CREATE TABLE Categories (
+    Id INT PRIMARY KEY AUTOINCREMENT,
+    Name VARCHAR(255) NOT NULL
+);
+
+ALTER TABLE Products ADD COLUMN category_id INT;
+ALTER TABLE Products ADD FOREIGN KEY (category_id) REFERENCES Categories(Id);
